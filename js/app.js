@@ -33,14 +33,11 @@ init();
 
 function init() {
   board = ["", "", "", "", "", "", "", "", ""];
-  turn = "X";
+  turn = "🤠";
   winner = false;
   tie = false;
 
 // Step 4
-function render() {
-
-};
 
   board.forEach((value, idx) => {
     squares[idx].textContent = value; 
@@ -52,9 +49,10 @@ function updateMessage() {
     updateMessage(`Player ${winner} wins!`);
   } else if (tie) {
     updateMessage("It's a tie!");
-  } else {
-    updateMessage(`Player ${turn}'s turn`);
-  }
+  } 
+};
+function render() {
+
 };
 
 // Step 5
@@ -87,7 +85,7 @@ function handleClick(a) {
     return;
   }
 
-  turn = turn === "X" ? "O" : "X";
+  turn = turn === "🤠" ? "😬" : "🤠";
   updateMessage(`Player ${turn}'s turn`);
 }
 
